@@ -248,6 +248,8 @@ export default function QuotePage() {
       
       preferred_contact: formData.preferredContact || "Not provided",
       product_type: selectedProducts.length > 0 ? selectedProducts.join(", ") : "Not provided",
+      product: selectedProducts.length > 0 ? selectedProducts.join(", ") : "Not provided",
+      products: selectedProducts.length > 0 ? selectedProducts.join(", ") : "Not provided",
       quantity: formData.quantity ? String(formData.quantity) : "Not provided",
       unit: formData.unit || "Not provided",
       delivery_date: formData.deliveryDate || "Not provided",
