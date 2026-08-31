@@ -217,38 +217,23 @@ export default function QuotePage() {
 
     setIsSubmitting(true);
 
-    const messageDetails = `
-Quote Request Details:
----------------------
-Name: ${formData.fullName.trim()}
-Organisation: ${formData.organisation.trim()}
-Mobile: ${formData.mobile.replace(/[\s-]/g, "")}
-WhatsApp: ${normalizeWhatsAppNumber(formData.whatsapp) || formData.whatsapp}
-Email: ${formData.email.trim()}
-Location: ${formData.city.trim()}, ${formData.state}
-Preferred Contact: ${formData.preferredContact}
-
-Product Requirements:
----------------------
-Uniform Types: ${selectedProducts.length ? selectedProducts.join(", ") : "None"}
-Quantity: ${formData.quantity} ${formData.unit}
-Delivery Date: ${formData.deliveryDate}
-Age/Size Categories: ${ageSizeCategories.length ? ageSizeCategories.join(", ") : "None"}
-Customisation: ${customisationOptions.length ? customisationOptions.join(", ") : "None"}
-Design Status: ${formData.hasDesign || "Not specified"}
-
-Additional Requirements:
-------------------------
-${formData.additionalRequirements.trim() || "None"}
-
-WhatsApp Updates: ${formData.whatsappUpdates ? "Yes" : "No"}
-`.trim();
-
     const templateParams = {
-      name: formData.fullName.trim(),
-      email: formData.email.trim(),
-      message: messageDetails,
-      time: new Date().toLocaleString(),
+      name: formData.fullName.trim() || "Not provided",
+      school_company: formData.organisation.trim() || "Not provided",
+      mobile: formData.mobile.replace(/[\s-]/g, "") || "Not provided",
+      whatsapp: normalizeWhatsAppNumber(formData.whatsapp) || formData.whatsapp || "Not provided",
+      email: formData.email.trim() || "Not provided",
+      location: (formData.city.trim() && formData.state) ? `${formData.city.trim()}, ${formData.state}` : (formData.city.trim() || formData.state || "Not provided"),
+      preferred_contact: formData.preferredContact || "Not provided",
+      product_type: selectedProducts.length > 0 ? selectedProducts.join(", ") : "Not provided",
+      quantity: formData.quantity ? String(formData.quantity) : "Not provided",
+      unit: formData.unit || "Not provided",
+      delivery_date: formData.deliveryDate || "Not provided",
+      age_size_category: ageSizeCategories.length > 0 ? ageSizeCategories.join(", ") : "Not provided",
+      customisation_options: customisationOptions.length > 0 ? customisationOptions.join(", ") : "Not provided",
+      design_status: formData.hasDesign || "Not provided",
+      additional_requirements: formData.additionalRequirements.trim() || "Not provided",
+      whatsapp_updates: formData.whatsappUpdates ? "Yes" : "No"
     };
 
     try {
