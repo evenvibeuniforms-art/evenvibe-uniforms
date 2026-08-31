@@ -11,7 +11,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.evenvibeuniforms.com'),
+  metadataBase: new URL('https://evenvibe.in'),
   title: {
     default: "EVENVIBE UNIFORMS | Custom Uniform Manufacturer in Tamil Nadu",
     template: "%s | EVENVIBE UNIFORMS"
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'EVENVIBE UNIFORMS | Custom Uniform Manufacturer in Tamil Nadu',
     description: 'EVENVIBE UNIFORMS is a leading custom uniform manufacturer in Tamil Nadu, specializing in school, corporate, industrial, and sports uniforms, offering bulk orders with premium quality.',
-    url: 'https://www.evenvibeuniforms.com',
+    url: 'https://evenvibe.in',
     siteName: 'EVENVIBE UNIFORMS',
     locale: 'en_IN',
     type: 'website',
@@ -60,8 +60,8 @@ const structuredData = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "EVENVIBE UNIFORMS",
-  "image": "https://www.evenvibeuniforms.com/logo.jpeg",
-  "url": "https://www.evenvibeuniforms.com",
+  "image": "https://evenvibe.in/logo.jpeg",
+  "url": "https://evenvibe.in",
   "telephone": "+919363227147",
   "email": "hello@evenvibe.com",
   "address": {

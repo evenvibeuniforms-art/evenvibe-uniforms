@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://www.evenvibeuniforms.com/sitemap.xml',
+    sitemap: 'https://evenvibe.in/sitemap.xml',
   };
 }
