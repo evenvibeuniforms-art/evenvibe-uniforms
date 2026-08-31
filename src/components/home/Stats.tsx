@@ -10,7 +10,7 @@ const statsData = [
   },
   {
     icon: Users,
-    value: "1 LAKH+",
+    value: "10 LAKH+",
     title: "UNIFORMS DELIVERED",
   },
   {
