@@ -217,13 +217,35 @@ export default function QuotePage() {
 
     setIsSubmitting(true);
 
+    let locationStr = "Not provided";
+    const c = formData.city.trim();
+    const s = formData.state.trim();
+    if (c && s) {
+      locationStr = `${c}, ${s}`;
+    } else if (c) {
+      locationStr = c;
+    } else if (s) {
+      locationStr = s;
+    }
+
     const templateParams = {
+      // Fallbacks to guarantee exact matching with EmailJS template variables
       name: formData.fullName.trim() || "Not provided",
+      fullName: formData.fullName.trim() || "Not provided",
+      full_name: formData.fullName.trim() || "Not provided",
+      
+      company: formData.organisation.trim() || "Not provided",
       school_company: formData.organisation.trim() || "Not provided",
+      organisation: formData.organisation.trim() || "Not provided",
+      
       mobile: formData.mobile.replace(/[\s-]/g, "") || "Not provided",
       whatsapp: normalizeWhatsAppNumber(formData.whatsapp) || formData.whatsapp || "Not provided",
       email: formData.email.trim() || "Not provided",
-      location: (formData.city.trim() && formData.state) ? `${formData.city.trim()}, ${formData.state}` : (formData.city.trim() || formData.state || "Not provided"),
+      
+      location: locationStr,
+      city: c || "Not provided",
+      state: s || "Not provided",
+      
       preferred_contact: formData.preferredContact || "Not provided",
       product_type: selectedProducts.length > 0 ? selectedProducts.join(", ") : "Not provided",
       quantity: formData.quantity ? String(formData.quantity) : "Not provided",
