@@ -3,12 +3,14 @@
 import { m } from 'framer-motion';
 import { Backpack, GraduationCap, Briefcase, Stethoscope, Bell, Utensils, Shield, Factory, ChefHat, PartyPopper } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const collectionsData = [
   {
     title: "SCHOOL UNIFORMS",
     image: "/images/collections/school.png",
     icon: Backpack,
+    href: "/school-uniforms-tamil-nadu/"
   },
   {
     title: "T-SHIRTS WEAR",
@@ -19,6 +21,7 @@ const collectionsData = [
     title: "SPORTS WEAR",
     image: "/images/collections/sports.png",
     icon: Backpack,
+    href: "/sports-uniforms/"
   },
   {
     title: "COLLEGE UNIFORMS",
@@ -29,6 +32,7 @@ const collectionsData = [
     title: "CORPORATE / OFFICE",
     image: "/images/collections/corporate.png",
     icon: Briefcase,
+    href: "/corporate-tshirts/"
   },
   {
     title: "HOSPITAL UNIFORMS",
@@ -146,6 +150,7 @@ export default function Collections() {
                 variants={itemVariants}
                 className="group relative w-full aspect-[3/4] sm:aspect-[4/5] lg:aspect-[3/4] rounded-2xl overflow-hidden cursor-pointer bg-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1.5 border border-black/5"
               >
+                <Link href={collection.href || "/#uniforms"} className="absolute inset-0 z-20" aria-label={collection.title} />
                 {/* Background Image */}
                 <Image
                   src={collection.image}

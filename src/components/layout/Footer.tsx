@@ -93,14 +93,18 @@ export default function Footer() {
             </h4>
             <ul className="flex flex-col gap-3">
               {[
-                'School Uniforms', 'College Uniforms', 'Corporate Uniforms',
-                'Hospital Uniforms', 'Hotel Uniforms', 'Industrial Uniforms',
-                'Chef Uniforms', 'Event Uniforms'
+                { name: 'School Uniforms TN', href: '/school-uniforms-tamil-nadu/' },
+                { name: 'School Uniforms Kerala', href: '/school-uniforms-kerala/' },
+                { name: 'Sports Uniforms', href: '/sports-uniforms/' },
+                { name: 'Corporate T-Shirts', href: '/corporate-tshirts/' },
+                { name: 'College Uniforms', href: '/#uniforms' },
+                { name: 'Hospital Uniforms', href: '/#uniforms' },
+                { name: 'Hotel & Industrial', href: '/#uniforms' }
               ].map(link => (
-                <li key={link}>
-                  <Link href="/#uniforms" className="text-gray-400 text-[14px] font-medium hover:text-[#3FAE49] transition-colors flex items-center gap-2 group">
+                <li key={link.name}>
+                  <Link href={link.href} className="text-gray-400 text-[14px] font-medium hover:text-[#3FAE49] transition-colors flex items-center gap-2 group">
                     <span className="w-0 h-[1px] bg-[#3FAE49] transition-all duration-300 group-hover:w-3" />
-                    {link}
+                    {link.name}
                   </Link>
                 </li>
               ))}

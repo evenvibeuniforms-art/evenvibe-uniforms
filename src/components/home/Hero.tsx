@@ -53,12 +53,12 @@ export default function Hero() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="text-[40px] sm:text-[50px] lg:text-[60px] font-black leading-[0.92] tracking-tight mb-5 uppercase"
+            className="text-[32px] sm:text-[40px] lg:text-[46px] font-black leading-[0.95] tracking-tight mb-5 uppercase"
           >
-            <span className="text-[#111827] block">UNIFORMS</span>
-            <span className="text-[#111827] block">THAT UNITE.</span>
-            <span className="text-[#3FAE49] block mt-2 lg:mt-3">QUALITY THAT</span>
-            <span className="text-[#3FAE49] block">REPRESENTS.</span>
+            <span className="text-[#111827] block">PREMIUM SCHOOL</span>
+            <span className="text-[#111827] block">& SPORTS UNIFORM</span>
+            <span className="text-[#3FAE49] block mt-2 lg:mt-3">MANUFACTURER IN</span>
+            <span className="text-[#3FAE49] block">TAMIL NADU AND KERALA</span>
           </m.h1>
 
           <m.p

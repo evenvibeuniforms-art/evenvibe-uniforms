@@ -13,11 +13,17 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://evenvibe.in'),
   title: {
-    default: "EVENVIBE UNIFORMS | Custom Uniform Manufacturer in Tamil Nadu",
+    default: "School Uniform Manufacturer in Tamil Nadu & Kerala | EVENVIBE",
     template: "%s | EVENVIBE UNIFORMS"
   },
-  description: "EVENVIBE UNIFORMS is a leading custom uniform manufacturer in Tamil Nadu, specializing in school, corporate, industrial, and sports uniforms, offering bulk orders with premium quality.",
-  keywords: ["uniform manufacturers in Tamil Nadu", "school uniform manufacturers", "custom uniform manufacturers", "corporate uniform suppliers", "bulk uniform manufacturers", "custom school uniforms", "uniform suppliers Tamil Nadu", "Tiruppur uniforms", "hospital uniforms", "industrial uniforms"],
+  description: "EVENVIBE UNIFORMS manufactures premium school uniforms, sports uniforms and corporate T-shirts for schools and businesses across Tamil Nadu and Kerala. Custom designs and bulk orders available.",
+  keywords: [
+    "School Uniform Manufacturer in Tamil Nadu",
+    "School Uniform Manufacturer in Kerala",
+    "Uniform Manufacturer in Tamil Nadu",
+    "Uniform Manufacturer in Kerala",
+    "EVENVIBE UNIFORMS"
+  ],
   authors: [{ name: "EVENVIBE UNIFORMS" }],
   creator: "EVENVIBE UNIFORMS",
   publisher: "EVENVIBE UNIFORMS",
@@ -30,8 +36,8 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'EVENVIBE UNIFORMS | Custom Uniform Manufacturer in Tamil Nadu',
-    description: 'EVENVIBE UNIFORMS is a leading custom uniform manufacturer in Tamil Nadu, specializing in school, corporate, industrial, and sports uniforms, offering bulk orders with premium quality.',
+    title: 'School Uniform Manufacturer in Tamil Nadu & Kerala | EVENVIBE',
+    description: 'EVENVIBE UNIFORMS manufactures premium school uniforms, sports uniforms and corporate T-shirts for schools and businesses across Tamil Nadu and Kerala. Custom designs and bulk orders available.',
     url: 'https://evenvibe.in',
     siteName: 'EVENVIBE UNIFORMS',
     locale: 'en_IN',
@@ -39,8 +45,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'EVENVIBE UNIFORMS | Custom Uniform Manufacturer in Tamil Nadu',
-    description: 'Leading custom uniform manufacturer in Tamil Nadu for schools, corporates, and industries. Premium fabrics and bulk production.',
+    title: 'School Uniform Manufacturer in Tamil Nadu & Kerala | EVENVIBE',
+    description: 'EVENVIBE UNIFORMS manufactures premium school uniforms, sports uniforms and corporate T-shirts for schools and businesses across Tamil Nadu and Kerala. Custom designs and bulk orders available.',
     creator: '@evenvibe',
   },
   robots: {
