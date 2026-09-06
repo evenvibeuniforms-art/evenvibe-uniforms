@@ -96,7 +96,7 @@ export default function Footer() {
                 { name: 'School Uniforms TN', href: '/school-uniforms-tamil-nadu/' },
                 { name: 'School Uniforms Kerala', href: '/school-uniforms-kerala/' },
                 { name: 'Sports Uniforms', href: '/sports-uniforms/' },
-                { name: 'Corporate T-Shirts', href: '/corporate-tshirts/' },
+                { name: 'Office/Corporate T-Shirts', href: '/corporate-tshirts/' },
                 { name: 'College Uniforms', href: '/#uniforms' },
                 { name: 'Hospital Uniforms', href: '/#uniforms' },
                 { name: 'Hotel & Industrial', href: '/#uniforms' }

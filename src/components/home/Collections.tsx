@@ -24,11 +24,6 @@ const collectionsData = [
     href: "/sports-uniforms/"
   },
   {
-    title: "COLLEGE UNIFORMS",
-    image: "/images/collections/college.png",
-    icon: GraduationCap,
-  },
-  {
     title: "CORPORATE / OFFICE",
     image: "/images/collections/corporate.png",
     icon: Briefcase,
@@ -66,7 +61,7 @@ const collectionsData = [
   },
   {
     title: "EVENT UNIFORMS",
-    image: "/images/collections/event.png",
+    image: "/images/collections/event2.png",
     icon: PartyPopper,
   },
 ];
