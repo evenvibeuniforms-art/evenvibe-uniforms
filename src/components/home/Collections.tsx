@@ -1,7 +1,7 @@
 "use client";
 
 import { m } from 'framer-motion';
-import { Backpack, GraduationCap, Briefcase, Stethoscope, Bell, Utensils, Shield, Factory, ChefHat, PartyPopper } from "lucide-react";
+import { Backpack, Briefcase, Stethoscope, Bell, Utensils, Shield, Factory, ChefHat, PartyPopper } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -23,6 +23,7 @@ const collectionsData = [
     icon: Backpack,
     href: "/sports-uniforms/"
   },
+
   {
     title: "CORPORATE / OFFICE",
     image: "/images/collections/corporate.png",
@@ -41,7 +42,7 @@ const collectionsData = [
   },
   {
     title: "RESTAURANT UNIFORMS",
-    image: "/images/collections/restaurant.png",
+    image: "/images/collections/restuarent.png",
     icon: Utensils,
   },
   {
