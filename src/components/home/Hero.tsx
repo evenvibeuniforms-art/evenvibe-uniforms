@@ -18,10 +18,10 @@ export default function Hero() {
         className="absolute inset-0 z-0"
       >
         <picture>
-          <source media="(max-width: 767px)" srcSet="/bg02.png" />
-          <source media="(min-width: 768px)" srcSet="/bg02.png" />
+          <source media="(max-width: 767px)" srcSet="/bg113.png" />
+          <source media="(min-width: 768px)" srcSet="/bg113.png" />
           <img
-            src="/bg02.png"
+            src="/bgg1.jpeg"
             alt="EVENVIBE UNIFORMS Background"
             className="w-full h-full object-cover object-[80%_top] lg:object-right"
             // Using fetchpriority for immediate LCP loading
