@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   title: 'Corporate T Shirt Manufacturer in Tamil Nadu & Kerala | Bulk Supplier',
   description: 'EVENVIBE UNIFORMS is a leading corporate T-shirt manufacturer in Tamil Nadu and Kerala. Operating out of Tiruppur, we offer bulk T-shirt manufacturing with custom branding.',
   alternates: {
-    canonical: 'https://evenvibe.in/corporate-tshirts/',
+    canonical: 'https://evenvibe.in/corporate-tshirts',
   },
   openGraph: {
     title: 'Corporate T Shirt Manufacturer in Tamil Nadu & Kerala | Bulk Supplier',
     description: 'EVENVIBE UNIFORMS is a leading corporate T-shirt manufacturer in Tamil Nadu and Kerala. Operating out of Tiruppur, we offer bulk T-shirt manufacturing with custom branding.',
-    url: 'https://evenvibe.in/corporate-tshirts/',
+    url: 'https://evenvibe.in/corporate-tshirts',
     type: 'website',
   }
 };

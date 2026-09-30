@@ -14,6 +14,32 @@ const cspHeader = `
 `;
 
 const nextConfig: NextConfig = {
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "evenvibe-uniforms.vercel.app",
+          },
+        ],
+        destination: "https://evenvibe.in/:path*",
+        permanent: true,
+      },
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "www.evenvibe.in",
+          },
+        ],
+        destination: "https://evenvibe.in/:path*",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

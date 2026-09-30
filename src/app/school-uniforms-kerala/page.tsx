@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   title: 'School Uniform Manufacturer in Kerala | EVENVIBE UNIFORMS',
   description: 'Looking for a reliable school uniform manufacturer in Kerala? EVENVIBE UNIFORMS provides high-quality, custom school uniforms with bulk supply capabilities for institutions across Kerala.',
   alternates: {
-    canonical: 'https://evenvibe.in/school-uniforms-kerala/',
+    canonical: 'https://evenvibe.in/school-uniforms-kerala',
   },
   openGraph: {
     title: 'School Uniform Manufacturer in Kerala | EVENVIBE UNIFORMS',
     description: 'Looking for a reliable school uniform manufacturer in Kerala? EVENVIBE UNIFORMS provides high-quality, custom school uniforms with bulk supply capabilities for institutions across Kerala.',
-    url: 'https://evenvibe.in/school-uniforms-kerala/',
+    url: 'https://evenvibe.in/school-uniforms-kerala',
     type: 'website',
   }
 };

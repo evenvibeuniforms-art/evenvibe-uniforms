@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   title: 'School Uniform Manufacturer in Tamil Nadu | EVENVIBE UNIFORMS',
   description: 'EVENVIBE UNIFORMS is a leading school uniform manufacturer in Tamil Nadu. We supply premium custom school uniforms and track pants for schools across the state. Bulk orders accepted.',
   alternates: {
-    canonical: 'https://evenvibe.in/school-uniforms-tamil-nadu/',
+    canonical: 'https://evenvibe.in/school-uniforms-tamil-nadu',
   },
   openGraph: {
     title: 'School Uniform Manufacturer in Tamil Nadu | EVENVIBE UNIFORMS',
     description: 'EVENVIBE UNIFORMS is a leading school uniform manufacturer in Tamil Nadu. We supply premium custom school uniforms and track pants for schools across the state. Bulk orders accepted.',
-    url: 'https://evenvibe.in/school-uniforms-tamil-nadu/',
+    url: 'https://evenvibe.in/school-uniforms-tamil-nadu',
     type: 'website',
   }
 };

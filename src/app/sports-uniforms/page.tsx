@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   title: 'Sports Uniform & Jersey Manufacturer in Tamil Nadu & Kerala',
   description: 'EVENVIBE UNIFORMS is a premium sports uniform manufacturer in Tamil Nadu and Kerala. We design custom sports jerseys, track pants, and athletic wear for schools and teams.',
   alternates: {
-    canonical: 'https://evenvibe.in/sports-uniforms/',
+    canonical: 'https://evenvibe.in/sports-uniforms',
   },
   openGraph: {
     title: 'Sports Uniform & Jersey Manufacturer in Tamil Nadu & Kerala',
     description: 'EVENVIBE UNIFORMS is a premium sports uniform manufacturer in Tamil Nadu and Kerala. We design custom sports jerseys, track pants, and athletic wear for schools and teams.',
-    url: 'https://evenvibe.in/sports-uniforms/',
+    url: 'https://evenvibe.in/sports-uniforms',
     type: 'website',
   }
 };
