@@ -3,8 +3,9 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { m, AnimatePresence } from 'framer-motion';
-import { Menu, X, ArrowRight } from "lucide-react";
+import { Menu, X, ArrowRight, MapPin } from "lucide-react";
 
 const navLinks = [
   { name: "HOME", href: "/" },
@@ -14,9 +15,21 @@ const navLinks = [
   { name: "INSTAGRAM", href: "/#instagram" },
 ];
 
+const regionalLinks = [
+  { name: "Tamil Nadu", href: "/school-uniforms-tamil-nadu" },
+  { name: "Kerala", href: "/school-uniforms-kerala" },
+  { name: "Bengaluru", href: "/school-uniforms-bengaluru" },
+  { name: "Chennai", href: "/school-uniforms-chennai" },
+  { name: "Tirupur", href: "/school-uniforms-tirupur" },
+  { name: "Trichy", href: "/school-uniforms-trichy" },
+  { name: "Sports Jerseys", href: "/sports-uniforms" },
+  { name: "Corporate T-Shirts", href: "/corporate-tshirts" },
+];
+
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,16 +49,15 @@ export default function Navbar() {
       <div className="container mx-auto max-w-[1440px] px-6 lg:px-12">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          {/* EVENVIBE UNIFORMS Logo */}
           <Link
             href="/"
             onClick={() => {
-              if (window.location.pathname === '/') {
+              if (pathname === '/') {
                 window.scrollTo(0, 0);
               }
             }}
             className="flex items-center shrink-0 group"
-            aria-label="EvenVibe Uniforms Home"
+            aria-label="EVENVIBE UNIFORMS Home"
           >
             <Image
               src="/logo.jpeg"
@@ -58,27 +70,30 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-9">
-            <ul className="flex items-center gap-7 text-[12px] font-bold text-gray-800">
-              {navLinks.map((link, idx) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    onClick={() => {
-                      if (link.href === '/' && window.location.pathname === '/') {
-                        window.scrollTo(0, 0);
-                      }
-                    }}
-                    className={`relative py-2 transition-colors hover:text-[#3FAE49] ${idx === 0 ? "text-[#111827]" : "text-gray-600"
-                      }`}
-                  >
-                    {link.name}
-                    {idx === 0 && (
-                      <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[#3FAE49]" />
-                    )}
-                  </Link>
-                </li>
-              ))}
+          <nav aria-label="Main Navigation" className="hidden lg:flex items-center gap-8">
+            <ul className="flex items-center gap-6 text-[12px] font-bold text-gray-800">
+              {navLinks.map((link) => {
+                const isHomeActive = link.href === '/' && pathname === '/';
+                return (
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+                      onClick={() => {
+                        if (link.href === '/' && pathname === '/') {
+                          window.scrollTo(0, 0);
+                        }
+                      }}
+                      className={`relative py-2 transition-colors hover:text-[#3FAE49] ${isHomeActive ? "text-[#111827]" : "text-gray-600"
+                        }`}
+                    >
+                      {link.name}
+                      {isHomeActive && (
+                        <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[#3FAE49]" />
+                      )}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
             <Link
               href="/quote"
@@ -93,7 +108,9 @@ export default function Navbar() {
           <button
             className="lg:hidden p-2 text-gray-800 hover:text-[#3FAE49] transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle Menu"
+            aria-label="Toggle Navigation Menu"
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -104,22 +121,22 @@ export default function Navbar() {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <m.div
+            id="mobile-menu"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="lg:hidden absolute top-full left-0 right-0 bg-white border-t border-gray-100 shadow-xl overflow-hidden"
+            className="lg:hidden absolute top-full left-0 right-0 bg-white border-t border-gray-100 shadow-xl overflow-y-auto max-h-[85vh]"
           >
-            <nav className="container mx-auto px-6 py-6 flex flex-col gap-4">
-              {navLinks.map((link, idx) => (
+            <nav aria-label="Mobile Navigation" className="container mx-auto px-6 py-6 flex flex-col gap-3">
+              {navLinks.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`text-[14px] font-bold py-3 border-b border-gray-50 flex items-center justify-between ${idx === 0 ? "text-[#3FAE49]" : "text-gray-800"
-                    } hover:text-[#3FAE49] transition-colors`}
+                  className="text-[14px] font-bold py-2.5 border-b border-gray-50 flex items-center justify-between text-gray-800 hover:text-[#3FAE49] transition-colors"
                   onClick={() => {
                     setIsMobileMenuOpen(false);
-                    if (link.href === '/' && window.location.pathname === '/') {
+                    if (link.href === '/' && pathname === '/') {
                       window.scrollTo(0, 0);
                     }
                   }}
@@ -128,10 +145,30 @@ export default function Navbar() {
                   <ArrowRight className="w-4 h-4 text-gray-300" />
                 </Link>
               ))}
+
+              <div className="pt-3 pb-1">
+                <div className="flex items-center gap-1.5 text-[11px] font-bold text-[#3FAE49] uppercase tracking-wider mb-2">
+                  <MapPin className="w-3.5 h-3.5" />
+                  <span>REGIONAL UNIFORM HUBS</span>
+                </div>
+                <div className="grid grid-cols-2 gap-2">
+                  {regionalLinks.map((r) => (
+                    <Link
+                      key={r.name}
+                      href={r.href}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="text-[12px] font-medium bg-gray-50 hover:bg-[#EAF6EA] hover:text-[#3FAE49] p-2 rounded-lg text-gray-700 transition-colors border border-gray-100"
+                    >
+                      {r.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
               <Link
                 href="/quote"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="group flex items-center justify-center gap-2 w-full mt-4 bg-[#3FAE49] hover:bg-[#2E7D32] text-white rounded-md px-6 py-4 text-[13px] font-bold transition-all shadow-md"
+                className="group flex items-center justify-center gap-2 w-full mt-3 bg-[#3FAE49] hover:bg-[#2E7D32] text-white rounded-md px-6 py-3.5 text-[13px] font-bold transition-all shadow-md"
               >
                 REQUEST A QUOTE
                 <ArrowRight className="w-4 h-4" />

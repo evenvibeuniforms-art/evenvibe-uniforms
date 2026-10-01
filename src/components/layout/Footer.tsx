@@ -86,23 +86,24 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3 - Collections */}
+          {/* Column 3 - Collections & Locations */}
           <div className="lg:col-span-3">
             <h4 className="text-[13px] font-bold text-white uppercase tracking-widest mb-6 flex items-center gap-3">
-              <div className="w-1.5 h-1.5 rounded-full bg-[#3FAE49]" /> COLLECTIONS
+              <div className="w-1.5 h-1.5 rounded-full bg-[#3FAE49]" /> LOCATIONS & APPAREL
             </h4>
-            <ul className="flex flex-col gap-3">
+            <ul className="flex flex-col gap-2.5">
               {[
-                { name: 'School Uniforms TN', href: '/school-uniforms-tamil-nadu/' },
-                { name: 'School Uniforms Kerala', href: '/school-uniforms-kerala/' },
-                { name: 'Sports Uniforms', href: '/sports-uniforms/' },
-                { name: 'Office/Corporate T-Shirts', href: '/corporate-tshirts/' },
-                { name: 'College Uniforms', href: '/#uniforms' },
-                { name: 'Hospital Uniforms', href: '/#uniforms' },
-                { name: 'Hotel & Industrial', href: '/#uniforms' }
+                { name: 'School Uniforms Tamil Nadu', href: '/school-uniforms-tamil-nadu' },
+                { name: 'School Uniforms Kerala', href: '/school-uniforms-kerala' },
+                { name: 'School Uniforms Bengaluru', href: '/school-uniforms-bengaluru' },
+                { name: 'School Uniforms Chennai', href: '/school-uniforms-chennai' },
+                { name: 'School Uniforms Tirupur', href: '/school-uniforms-tirupur' },
+                { name: 'School Uniforms Trichy', href: '/school-uniforms-trichy' },
+                { name: 'Sports Uniforms & Jerseys', href: '/sports-uniforms' },
+                { name: 'Corporate T-Shirts Tiruppur', href: '/corporate-tshirts' }
               ].map(link => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-gray-400 text-[14px] font-medium hover:text-[#3FAE49] transition-colors flex items-center gap-2 group">
+                  <Link href={link.href} className="text-gray-400 text-[13px] font-medium hover:text-[#3FAE49] transition-colors flex items-center gap-2 group">
                     <span className="w-0 h-[1px] bg-[#3FAE49] transition-all duration-300 group-hover:w-3" />
                     {link.name}
                   </Link>
@@ -118,13 +119,13 @@ export default function Footer() {
             </h4>
             <div className="flex flex-col gap-6">
 
-              <a href="tel:+919363227147" aria-label="Call +91 93632 27147" className="group flex items-start gap-4 cursor-pointer transition-all">
+              <a href="tel:+919344039068" aria-label="Call +91 93440 39068" className="group flex items-start gap-4 cursor-pointer transition-all">
                 <div className="w-10 h-10 rounded-full border border-gray-800 bg-gray-900 flex items-center justify-center flex-shrink-0 text-[#3FAE49] group-hover:bg-[#3FAE49]/10 group-hover:border-[#3FAE49] transition-all">
                   <Phone className="w-4 h-4" />
                 </div>
                 <div>
                   <div className="text-[10px] text-gray-500 font-bold uppercase tracking-widest mb-1">PHONE</div>
-                  <div className="text-[14px] text-white font-medium group-hover:text-[#3FAE49] transition-colors">+91 9344039068</div>
+                  <div className="text-[14px] text-white font-medium group-hover:text-[#3FAE49] transition-colors">+91 93440 39068</div>
                 </div>
               </a>
 
@@ -134,7 +135,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <div className="text-[10px] text-gray-500 font-bold uppercase tracking-widest mb-1">WHATSAPP</div>
-                  <div className="text-[14px] text-white font-medium group-hover:text-[#3FAE49] transition-colors">Chat with our experts</div>
+                  <div className="text-[14px] text-white font-medium group-hover:text-[#3FAE49] transition-colors">+91 93440 39068 (Chat)</div>
                 </div>
               </a>
 
@@ -148,13 +149,13 @@ export default function Footer() {
                 </div>
               </a>
 
-              <a href="https://www.google.com/maps/search/?api=1&query=Tamil+Nadu+India" target="_blank" rel="noopener noreferrer" aria-label="View location on Google Maps" className="group flex items-start gap-4 cursor-pointer transition-all">
+              <a href="https://www.google.com/maps/search/?api=1&query=DKJ+APPARELS+20th+Azer+Nagar+SAP+Theatre+Backside+Avinashi+Road+Tiruppur+Tamil+Nadu+641603" target="_blank" rel="noopener noreferrer" aria-label="View factory location in Tiruppur on Google Maps" className="group flex items-start gap-4 cursor-pointer transition-all">
                 <div className="w-10 h-10 rounded-full border border-gray-800 bg-gray-900 flex items-center justify-center flex-shrink-0 text-[#3FAE49] group-hover:bg-[#3FAE49]/10 group-hover:border-[#3FAE49] transition-all">
                   <MapPin className="w-4 h-4" />
                 </div>
                 <div>
-                  <div className="text-[10px] text-gray-500 font-bold uppercase tracking-widest mb-1">LOCATION</div>
-                  <div className="text-[14px] text-white font-medium group-hover:text-[#3FAE49] transition-colors">DKJ APPARELS,<br /> 20th, Azer Nagar, SAP Theatre Backside, Avinashi Road,<br /> Tirupur – 641603 </div>
+                  <div className="text-[10px] text-gray-500 font-bold uppercase tracking-widest mb-1">FACTORY / LOCATION</div>
+                  <div className="text-[14px] text-white font-medium group-hover:text-[#3FAE49] transition-colors">DKJ APPARELS / EVENVIBE UNIFORMS,<br /> 20th, Azer Nagar, SAP Theatre Backside, Avinashi Road,<br /> Tiruppur – 641603, Tamil Nadu</div>
                 </div>
               </a>
 
@@ -167,7 +168,6 @@ export default function Footer() {
         <div className="border-t border-gray-800 pt-8 pb-4 flex flex-col lg:flex-row items-center justify-between gap-6">
           <div className="flex flex-col md:flex-row items-center gap-3 text-center md:text-left text-gray-500 text-[13px] font-medium">
             <span>© 2026 EVENVIBE UNIFORMS. All Rights Reserved.</span>
-
           </div>
 
           <div className="flex flex-col sm:flex-row items-center gap-2 text-gray-500 text-[12px] font-medium tracking-wide uppercase">

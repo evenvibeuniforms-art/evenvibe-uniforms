@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ScrollRestoration from "@/components/layout/ScrollRestoration";
+import MotionProvider from "@/providers/MotionProvider";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -13,15 +14,23 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://evenvibe.in'),
   title: {
-    default: "School Uniform Manufacturer in Tamil Nadu & Kerala | EVENVIBE",
+    default: "School Uniform Manufacturer in Tamil Nadu & Kerala | EVENVIBE UNIFORMS",
     template: "%s | EVENVIBE UNIFORMS"
   },
-  description: "EVENVIBE UNIFORMS manufactures premium school uniforms, sports uniforms and corporate T-shirts for schools and businesses across Tamil Nadu and Kerala. Custom designs and bulk orders available.",
+  description: "EVENVIBE UNIFORMS is a premier school uniform, sports jersey, and corporate apparel manufacturer in Tamil Nadu, Kerala & Bengaluru. Custom design, bulk manufacturing, and direct factory dispatch from Tirupur.",
   keywords: [
     "School Uniform Manufacturer in Tamil Nadu",
     "School Uniform Manufacturer in Kerala",
-    "Uniform Manufacturer in Tamil Nadu",
-    "Uniform Manufacturer in Kerala",
+    "School Uniform Manufacturer in Bengaluru",
+    "School Uniform Manufacturer in Chennai",
+    "School Uniform Manufacturer in Trichy",
+    "School Uniform Manufacturer in Tirupur",
+    "School Uniform Manufacturer in Tamil Nadu & Kerala",
+    "Sports Uniform Manufacturer in Tamil Nadu",
+    "Sports Uniform Manufacturer in Kerala",
+    "Sports Uniform Manufacturer in Bengaluru",
+    "Sports Uniform & Jersey Manufacturer in Tamil Nadu & Kerala",
+    "Bulk T Shirt Manufacturer in Tiruppur",
     "EVENVIBE UNIFORMS"
   ],
   authors: [{ name: "EVENVIBE UNIFORMS" }],
@@ -33,21 +42,30 @@ export const metadata: Metadata = {
     telephone: false,
   },
   alternates: {
-    canonical: '/',
+    canonical: 'https://evenvibe.in',
   },
   openGraph: {
-    title: 'School Uniform Manufacturer in Tamil Nadu & Kerala | EVENVIBE',
-    description: 'EVENVIBE UNIFORMS manufactures premium school uniforms, sports uniforms and corporate T-shirts for schools and businesses across Tamil Nadu and Kerala. Custom designs and bulk orders available.',
+    title: 'School Uniform Manufacturer in Tamil Nadu & Kerala | EVENVIBE UNIFORMS',
+    description: 'Premier school uniform, sports jersey, and corporate apparel manufacturer in Tamil Nadu, Kerala & Bengaluru. Direct factory manufacturing in Tirupur with bulk supply capabilities.',
     url: 'https://evenvibe.in',
     siteName: 'EVENVIBE UNIFORMS',
     locale: 'en_IN',
     type: 'website',
+    images: [
+      {
+        url: '/logo.jpeg',
+        width: 1200,
+        height: 630,
+        alt: 'EVENVIBE UNIFORMS - Custom School and Sports Uniform Manufacturer',
+      }
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'School Uniform Manufacturer in Tamil Nadu & Kerala | EVENVIBE',
-    description: 'EVENVIBE UNIFORMS manufactures premium school uniforms, sports uniforms and corporate T-shirts for schools and businesses across Tamil Nadu and Kerala. Custom designs and bulk orders available.',
-    creator: '@evenvibe',
+    title: 'School Uniform Manufacturer in Tamil Nadu & Kerala | EVENVIBE UNIFORMS',
+    description: 'Premier school uniform, sports jersey, and corporate apparel manufacturer in Tamil Nadu, Kerala & Bengaluru. Direct factory manufacturing in Tirupur.',
+    creator: '@evenvibe__uniforms',
+    images: ['/logo.jpeg'],
   },
   robots: {
     index: true,
@@ -64,22 +82,92 @@ export const metadata: Metadata = {
 
 const structuredData = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "EVENVIBE UNIFORMS",
-  "image": "https://evenvibe.in/logo.jpeg",
-  "url": "https://evenvibe.in",
-  "telephone": "+919363227147",
-  "email": "hello@evenvibe.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressRegion": "Tamil Nadu",
-    "addressCountry": "IN"
-  },
-  "areaServed": ["Tamil Nadu", "Kerala", "India"],
-  "priceRange": "$$"
+  "@graph": [
+    {
+      "@type": ["LocalBusiness", "Organization", "ClothingStore"],
+      "@id": "https://evenvibe.in/#organization",
+      "name": "EVENVIBE UNIFORMS",
+      "legalName": "DKJ APPARELS",
+      "alternateName": ["EVENVIBE", "Evenvibe Uniforms Tirupur"],
+      "url": "https://evenvibe.in",
+      "logo": "https://evenvibe.in/logo.jpeg",
+      "image": "https://evenvibe.in/logo.jpeg",
+      "telephone": "+919344039068",
+      "email": "dkjapparels@gmail.com",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "20th, Azer Nagar, SAP Theatre Backside, Avinashi Road",
+        "addressLocality": "Tiruppur",
+        "addressRegion": "Tamil Nadu",
+        "postalCode": "641603",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 11.1085,
+        "longitude": 77.3411
+      },
+      "areaServed": [
+        { "@type": "State", "name": "Tamil Nadu" },
+        { "@type": "State", "name": "Kerala" },
+        { "@type": "State", "name": "Karnataka" },
+        { "@type": "City", "name": "Tiruppur" },
+        { "@type": "City", "name": "Chennai" },
+        { "@type": "City", "name": "Trichy" },
+        { "@type": "City", "name": "Bengaluru" },
+        { "@type": "City", "name": "Kochi" },
+        { "@type": "Country", "name": "India" }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/evenvibe__uniforms"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Uniform Manufacturing Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "School Uniform Manufacturing"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Sports Uniform & Jersey Manufacturing"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Corporate T-Shirt Manufacturing"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "School Track Pant Manufacturing"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://evenvibe.in/#website",
+      "url": "https://evenvibe.in",
+      "name": "EVENVIBE UNIFORMS",
+      "publisher": {
+        "@id": "https://evenvibe.in/#organization"
+      }
+    }
+  ]
 };
-
-import MotionProvider from "@/providers/MotionProvider";
 
 export default function RootLayout({
   children,

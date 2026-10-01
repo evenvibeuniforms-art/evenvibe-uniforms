@@ -7,5 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
     },
     sitemap: 'https://evenvibe.in/sitemap.xml',
+    host: 'https://evenvibe.in',
   };
 }
+

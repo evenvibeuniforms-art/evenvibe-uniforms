@@ -1,7 +1,7 @@
 "use client";
 
 import { m } from 'framer-motion';
-import { Backpack, Briefcase, Stethoscope, Bell, Utensils, Shield, Factory, ChefHat, PartyPopper } from "lucide-react";
+import { Backpack, Shirt, Trophy, Briefcase, Stethoscope, Bell, Utensils, Shield, Factory, ChefHat, PartyPopper } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -10,25 +10,26 @@ const collectionsData = [
     title: "SCHOOL UNIFORMS",
     image: "/images/collections/school.png",
     icon: Backpack,
-    href: "/school-uniforms-tamil-nadu/"
+    href: "/school-uniforms-tamil-nadu"
   },
   {
     title: "T-SHIRTS WEAR",
     image: "/images/collections/tshirt.png",
-    icon: Backpack,
+    icon: Shirt,
+    href: "/corporate-tshirts"
   },
   {
     title: "SPORTS WEAR",
     image: "/images/collections/sports.png",
-    icon: Backpack,
-    href: "/sports-uniforms/"
+    icon: Trophy,
+    href: "/sports-uniforms"
   },
 
   {
     title: "CORPORATE / OFFICE",
     image: "/images/collections/corporate.png",
     icon: Briefcase,
-    href: "/corporate-tshirts/"
+    href: "/corporate-tshirts"
   },
   {
     title: "HOSPITAL UNIFORMS",
