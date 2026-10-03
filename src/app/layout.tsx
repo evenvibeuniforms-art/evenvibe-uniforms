@@ -87,13 +87,23 @@ const structuredData = {
       "@type": ["LocalBusiness", "Organization"],
       "@id": "https://evenvibe.in/#organization",
       "name": "EVENVIBE UNIFORMS",
-      "legalName": "DKJ APPARELS",
+      "legalName": "DKJ APPARELS PRIVATE LIMITED",
       "alternateName": ["EVENVIBE", "Evenvibe Uniforms Tirupur"],
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "DKJ APPARELS PRIVATE LIMITED",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Perambalur",
+          "addressRegion": "Tamil Nadu",
+          "addressCountry": "IN"
+        }
+      },
       "url": "https://evenvibe.in",
       "logo": "https://evenvibe.in/logo.jpeg",
       "image": "https://evenvibe.in/logo.jpeg",
       "telephone": "+919344039068",
-      "email": "dkjapparels@gmail.com",
+      "email": "evenvibeuniforms@gmail.com",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "20th, Azer Nagar, SAP Theatre Backside, Avinashi Road",
