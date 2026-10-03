@@ -118,8 +118,10 @@ const structuredData = {
         { "@type": "City", "name": "Kochi" },
         { "@type": "Country", "name": "India" }
       ],
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=DKJ+APPARELS+20th+Azer+Nagar+SAP+Theatre+Backside+Avinashi+Road+Tiruppur+Tamil+Nadu+641603",
       "sameAs": [
-        "https://www.instagram.com/evenvibe__uniforms"
+        "https://www.instagram.com/evenvibe__uniforms",
+        "https://www.google.com/maps/search/?api=1&query=DKJ+APPARELS+20th+Azer+Nagar+SAP+Theatre+Backside+Avinashi+Road+Tiruppur+Tamil+Nadu+641603"
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
