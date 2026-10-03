@@ -84,7 +84,7 @@ const structuredData = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["LocalBusiness", "Organization", "ClothingStore"],
+      "@type": ["LocalBusiness", "Organization"],
       "@id": "https://evenvibe.in/#organization",
       "name": "EVENVIBE UNIFORMS",
       "legalName": "DKJ APPARELS",
@@ -94,7 +94,6 @@ const structuredData = {
       "image": "https://evenvibe.in/logo.jpeg",
       "telephone": "+919344039068",
       "email": "dkjapparels@gmail.com",
-      "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "20th, Azer Nagar, SAP Theatre Backside, Avinashi Road",

@@ -45,18 +45,7 @@ const structuredData = {
       "serviceType": "School & Sports Uniform Manufacturing",
       "name": "School Uniform Manufacturer in Tirupur",
       "provider": {
-        "@type": "LocalBusiness",
-        "name": "EVENVIBE UNIFORMS",
-        "image": "https://evenvibe.in/logo.jpeg",
-        "telephone": "+919344039068",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "20th, Azer Nagar, SAP Theatre Backside, Avinashi Road",
-          "addressLocality": "Tiruppur",
-          "addressRegion": "Tamil Nadu",
-          "postalCode": "641603",
-          "addressCountry": "IN"
-        }
+        "@id": "https://evenvibe.in/#organization"
       },
       "areaServed": [
         { "@type": "City", "name": "Tiruppur" },

@@ -190,7 +190,7 @@ export default function InstagramReels() {
               <InstagramIcon className="w-7 h-7 text-[#3FAE49]" strokeWidth={1.5} />
             </div>
             <div>
-              <h4 className="font-bold text-[#3FAE49] text-[15px] mb-1">@evenvibeuniforms</h4>
+              <h4 className="font-bold text-[#3FAE49] text-[15px] mb-1">@evenvibe__uniforms</h4>
               <p className="text-gray-500 text-[13px] font-medium leading-relaxed">
                 Follow us for more updates, new designs and behind the scenes.
               </p>
