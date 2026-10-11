@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { m, AnimatePresence } from 'framer-motion';
-import { Menu, X, ArrowRight, MapPin } from "lucide-react";
+import { Menu, X, ArrowRight, MapPin, LogIn } from "lucide-react";
 
 const navLinks = [
   { name: "HOME", href: "/" },
@@ -95,13 +95,22 @@ export default function Navbar() {
                 );
               })}
             </ul>
-            <Link
-              href="/quote"
-              className="group flex items-center gap-2 bg-[#3FAE49] hover:bg-[#2E7D32] text-white rounded-md px-5 py-2.5 text-[11px] font-bold transition-all shadow-sm"
-            >
-              REQUEST A QUOTE
-              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            <div className="flex items-center gap-3">
+              <Link
+                href="https://school.evenvibe.in/login"
+                className="flex items-center gap-1.5 border border-gray-200 hover:border-[#3FAE49] text-gray-700 hover:text-[#3FAE49] rounded-md px-4 py-2.5 text-[11px] font-bold transition-all shadow-sm"
+              >
+                <LogIn className="w-3.5 h-3.5" />
+                LOGIN
+              </Link>
+              <Link
+                href="/quote"
+                className="group flex items-center gap-2 bg-[#3FAE49] hover:bg-[#2E7D32] text-white rounded-md px-5 py-2.5 text-[11px] font-bold transition-all shadow-sm"
+              >
+                REQUEST A QUOTE
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
           </nav>
 
           {/* Mobile Menu Toggle */}
@@ -165,14 +174,24 @@ export default function Navbar() {
                 </div>
               </div>
 
-              <Link
-                href="/quote"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="group flex items-center justify-center gap-2 w-full mt-3 bg-[#3FAE49] hover:bg-[#2E7D32] text-white rounded-md px-6 py-3.5 text-[13px] font-bold transition-all shadow-md"
-              >
-                REQUEST A QUOTE
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+              <div className="flex flex-col gap-2.5 mt-3">
+                <Link
+                  href="https://school.evenvibe.in/login"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="flex items-center justify-center gap-2 w-full border border-gray-200 hover:border-[#3FAE49] text-gray-700 hover:text-[#3FAE49] rounded-md px-6 py-3 text-[13px] font-bold transition-all shadow-sm"
+                >
+                  <LogIn className="w-4 h-4" />
+                  LOGIN
+                </Link>
+                <Link
+                  href="/quote"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="group flex items-center justify-center gap-2 w-full bg-[#3FAE49] hover:bg-[#2E7D32] text-white rounded-md px-6 py-3.5 text-[13px] font-bold transition-all shadow-md"
+                >
+                  REQUEST A QUOTE
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
             </nav>
           </m.div>
         )}
